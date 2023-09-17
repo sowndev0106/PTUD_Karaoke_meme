@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database connection settings -->
+		<property name="connection.driver_class">
+			com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+		<property name="connection.url">
+			jdbc:sqlserver://localhost:1433;databaseName=KaraokeMeMe</property>
+		<property name="connection.username">sa</property>
+		<property name="connection.password">123456</property>
+		<!-- SQL dialect -->
+		<property name="dialect">org.hibernate.dialect.SQLServer2012Dialect</property>
+		<!-- Enable Hibernate's automatic session context management -->
+		<property name="current_session_context_class">thread</property>
+		<!-- Echo all executed SQL to stdout -->
+		<property name="show_sql">false</property>
+		
+		<!-- Drop and re-create the database schema on startup -->
+		<property name="hbm2ddl.auto">update</property>
+	</session-factory>
+</hibernate-configuration>
